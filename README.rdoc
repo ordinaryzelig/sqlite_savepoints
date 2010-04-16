@@ -6,7 +6,7 @@ This plugin enables Rails to use savepoints when using sqlite3.
 
 from rails root:
 
-  git clone git@github.com:ordinaryzelig/sqlite_savepoints.git vendor/plugins/sqlite_savepoints
+  git clone git://github.com/ordinaryzelig/sqlite_savepoints.git vendor/plugins/sqlite_savepoints
 
 == Example
 

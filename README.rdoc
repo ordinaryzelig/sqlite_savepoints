@@ -1,0 +1,24 @@
+== Description
+
+This plugin enables Rails to use savepoints when using sqlite3.
+
+== Example
+
+http://guides.rubyonrails.org/2_3_release_notes.html#nested-transactions.
+
+== Implementation
+
+Rails 2.3.5 does not implement the following methods for ActiveRecord::ConnectionAdapters::SQLite3Adapter:
+create_savepoint
+release_savepoint
+rollback_to_savepoint
+supports_savepoints?
+SQLite DOES support savepoints just like MySQL (http://www.sqlite.org/lang_savepoint.html; see version below).  So i just copied the mysql adapter code.
+
+== Version
+
+This plugin was tested with SQLite version 3.6.12.  If you're using a different version, run the plugin tests to make sure it works.  Also, see Testing Bug below.
+
+== Testing Bug
+
+The tests pass individually, but not when run altogether.  The same SQLite savepoint statements seem to be executing.  But if you change the test names, different tests will pass and fail.  That's my only clue to what's going on.

@@ -1,1 +1,1 @@
-require 'sqlite_savepoint' if if defined?(ActiveRecord::ConnectionAdapters::SQLite3Adapter)
+require 'sqlite_savepoint' if defined?(ActiveRecord::ConnectionAdapters::SQLite3Adapter)
